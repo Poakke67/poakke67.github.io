@@ -21,12 +21,12 @@
             justify-content: center;
             align-items: center;
             background-image: radial-gradient(circle at top right, #1f2937, #080b12);
+            padding: 20px;
         }
 
         .container {
             display: flex;
             gap: 20px;
-            padding: 20px;
             width: 100%;
             max-width: 900px;
         }
@@ -61,52 +61,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Стиль для карточки Алёны (Стиль и волосы) */
+        /* Стиль для карточки (Стиль и волосы) */
         .card.hair-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(219, 39, 119, 0.2);
-            border-color: #db2777;
-        }
-
-        .card.hair-card h2 {
-            color: #fce7f3; /* Мягкий светлый оттенок */
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #94a3b8;
-        }
-
-        /* Адаптивность для телефонов */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            .card {
-                min-height: 250px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <a href="https://poakke67.github.io/Rocky/" class="card ai-card">
-            <h2>Алина</h2>
-            <p>Web-разработка и ИИ для бизнеса</p>
-        </a>
-
-        <a href="https://poakke67.github.io/Price-AlenaKotliar/" class="card hair-card">
-            <h2>Алёна</h2>
-            <p>Hair-стилист | Окрашивание и уход</p>
-        </a>
-    </div>
-
-</body>
-</html>
+            box-shadow: 0 20px 40px rgba(212, 184, 114, 0.2); /* Мягкая
