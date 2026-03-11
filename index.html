@@ -64,4 +64,49 @@
         /* Стиль для карточки (Стиль и волосы) */
         .card.hair-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(212, 184, 114, 0.2); /* Мягкая
+            box-shadow: 0 20px 40px rgba(212, 184, 114, 0.2); /* Мягкая золотая тень */
+            border-color: #d4b872; /* Мягкая золотая рамка при наведении */
+        }
+
+        .card.hair-card h2 {
+            color: #d4b872; /* Приглушенный благородный золотой цвет */
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+        }
+
+        /* Адаптивность для телефонов */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .card {
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="https://poakke67.github.io/Rocky/" class="card ai-card">
+            <h2>Алина</h2>
+            <p>Web-разработка и ИИ для бизнеса</p>
+        </a>
+
+        <a href="https://poakke67.github.io/Price-AlenaKotliar/" class="card hair-card">
+            <h2>Алёна</h2>
+            <p>Hair-стилист | Окрашивание и уход</p>
+        </a>
+    </div>
+
+</body>
+</html>
