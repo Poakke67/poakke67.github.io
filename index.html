@@ -61,15 +61,18 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Стиль для карточки (Стиль и волосы) */
+        /* Стиль для карточки Алёны (Стиль и волосы) */
         .card.hair-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(212, 184, 114, 0.2); /* Мягкая золотая тень */
-            border-color: #d4b872; /* Мягкая золотая рамка при наведении */
+            box-shadow: 0 20px 40px rgba(223, 194, 96, 0.2); /* Тень в тон нового цвета */
+            border-color: #DFC260; /* Золотая рамка при наведении */
         }
 
         .card.hair-card h2 {
-            color: #d4b872; /* Приглушенный благородный золотой цвет */
+            /* Золотой градиент из левого нижнего в правый верхний угол */
+            background: linear-gradient(to top right, #EBD78E, #DFC260);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         h2 {
