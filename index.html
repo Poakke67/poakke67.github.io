@@ -13,6 +13,8 @@
             font-family: 'Montserrat', sans-serif;
         }
 
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
         body {
             background-color: #080b12;
             color: #fff;
@@ -110,6 +112,25 @@
             <p>Hair-стилист | Окрашивание и уход</p>
         </a>
     </div>
+
+    <script>
+        const tg = window.Telegram.WebApp;
+tg.expand(); // Развернуть на весь экран
+
+// Функция, которую ты повесишь на кнопку "Записаться" на сайте
+function sendOrder(serviceName) {
+    const phoneNumber = prompt("Введите ваш номер телефона для связи:");
+    
+    if (phoneNumber) {
+        const data = {
+            service: serviceName,
+            phone: phoneNumber
+        };
+        // Отправляем данные боту и закрываем приложение
+        tg.sendData(JSON.stringify(data));
+    }
+}
+    </script>
 
 </body>
 </html>
