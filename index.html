@@ -101,35 +101,38 @@
 <body>
 
     <div class="container">
-        <a href="https://poakke67.github.io/Rocky/" class="card ai-card">
+        <div class="card ai-card" onclick="sendOrder('Web/AI (Алина)')" style="cursor: pointer;">
             <h2>Алина</h2>
             <p>Web-разработка и ИИ для бизнеса</p>
-        </a>
+        </div>
 
-        <a href="https://poakke67.github.io/Price-AK/" class="card hair-card">
+        <div class="card hair-card" onclick="sendOrder('Стилист (Алёна)')" style="cursor: pointer;">
             <h2>Алёна</h2>
             <p>Hair-стилист | Окрашивание и уход</p>
-        </a>
+        </div>
     </div>
 
     <script>
         const tg = window.Telegram.WebApp;
-tg.expand(); // Развернуть на весь экран
+        tg.expand(); // Развернуть на весь экран
 
-// Функция, которую ты повесишь на кнопку "Записаться" на сайте
-function sendOrder(serviceName) {
-    const phoneNumber = prompt("Введите ваш номер телефона для связи:");
-    
-    if (phoneNumber) {
-        const data = {
-            service: serviceName,
-            phone: phoneNumber
-        };
-        // Отправляем данные боту и закрываем приложение
-        tg.sendData(JSON.stringify(data));
-    }
-}
+        function sendOrder(serviceName) {
+            const phoneNumber = prompt("Введите ваш номер телефона для связи:");
+            
+            if (phoneNumber) {
+                const data = {
+                    service: serviceName,
+                    phone: phoneNumber
+                };
+                // Отправляем данные боту и закрываем приложение
+                tg.sendData(JSON.stringify(data));
+                tg.close(); 
+            }
+        }
     </script>
+
+</body>
+</html>
 
 </body>
 </html>
