@@ -112,25 +112,6 @@
         </div>
     </div>
 
-    <script>
-        const tg = window.Telegram.WebApp;
-        tg.expand(); // Развернуть на весь экран
-
-        function sendOrder(serviceName) {
-            const phoneNumber = prompt("Введите ваш номер телефона для связи:");
-            
-            if (phoneNumber) {
-                const data = {
-                    service: serviceName,
-                    phone: phoneNumber
-                };
-                // Отправляем данные боту и закрываем приложение
-                tg.sendData(JSON.stringify(data));
-                tg.close(); 
-            }
-        }
-    </script>
-
 </body>
 </html>
 
